@@ -3,6 +3,7 @@ import Img from "../img/img.png";
 import Attach from "../img/attach.png";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
+import { IoSendSharp } from "react-icons/io5";
 import {
   arrayUnion,
   doc,
@@ -92,7 +93,7 @@ const Input = () => {
         <label htmlFor="file">
           <img src={Img} alt="" />
         </label>
-        <button onClick={handleSend}>Send</button>
+        <button onClick={handleSend}><span><IoSendSharp/></span></button>
       </div>
     </div>
   );
