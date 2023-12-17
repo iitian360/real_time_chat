@@ -13,9 +13,12 @@
     @content;
   }
 }
-
+// $color1:#a7bcff;
+// $color2:#5d5b8d;
 $color1:#a7bcff;
-$color2:#5d5b8d;
+$color3:#51647a;
+$color2:$color3;
+$color4:#394655;
 
 .formContainer {
   background-color:$color1;
@@ -110,13 +113,14 @@ $color2:#5d5b8d;
 
     .sidebar {
       flex: 1;
-      background-color: #3e3c61;
+      // background-color: #3e3c61;
+      background-color: $color3;
       position: relative;
 
       .navbar {
         display: flex;
         align-items: center;
-        background-color: #2f2d52;
+        background-color: $color4;
         height: 50px;
         padding: 10px;
         justify-content: space-between;
@@ -185,7 +189,8 @@ $color2:#5d5b8d;
         cursor: pointer;
 
         &:hover {
-          background-color: #2f2d52;
+          // background-color: #2f2d52;
+          background-color:$color4;
         }
 
         img {
@@ -261,7 +266,8 @@ $color2:#5d5b8d;
             gap: 10px;
 
             p {
-              background-color: white;
+              background-color: #9c9ca2;
+              color: white;
               padding: 10px 20px;
               border-radius: 0px 10px 10px 10px;
               max-width: max-content;
@@ -278,7 +284,7 @@ $color2:#5d5b8d;
             .messageContent {
               align-items: flex-end;
               p {
-                background-color: #8da4f1;
+                background-color:$color4;
                 color: white;
                 border-radius: 10px 0px 10px 10px;
               }
