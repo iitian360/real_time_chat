@@ -25,12 +25,12 @@ const Login = () => {
         <span className="logo">Notify</span>
         <span className="title">Login here</span>
         <form onSubmit={handleSubmit}>
-          <input type="email" placeholder="email" />
-          <input type="password" placeholder="password" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
           <button>Sign in</button>
           {err && <span style={{color:"red"}}>Something went wrong</span>}
         </form>
-        <p>You don't have an account? <Link to="/register">Register</Link></p>
+        <p>You don't have an account? <Link className="link" to="/register">Register</Link></p>
       </div>
     </div>
   );
