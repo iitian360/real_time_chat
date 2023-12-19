@@ -135,6 +135,13 @@ $color4:#394655;
     @include tablet {
      width: 90%;
     }
+    @include mobile{
+      width: 100vw;
+      height: 100vh;
+      border-radius:0;
+      overflow: hidden;
+
+    }
 
     .sidebar {
       flex: 1;
