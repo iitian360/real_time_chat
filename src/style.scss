@@ -370,6 +370,21 @@ $color4:#394655;
         justify-content: space-between;
         padding: 10px;
         color: lightgray;
+        .chatUser{
+          display: flex;
+          flex-direction: row-reverse;
+          gap: 10px;
+          img{
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            border: .5px solid white;
+          }
+          span{
+            font-size: 13px;
+            color: white;
+          }
+        }
       }
 
       .chatIcons {
@@ -406,14 +421,18 @@ $color4:#394655;
             }
 
             img {
-              width: 40px;
-              height: 40px;
+              width: 25px;
+              height: 25px;
               border-radius: 50%;
               object-fit: cover;
               @include mobile{
                 width: 24px;
                 height: 24px;
               }
+            }
+            span{
+              font-size: 12px;
+              color: black;
             }
           }
           .messageContent {
@@ -425,7 +444,7 @@ $color4:#394655;
             p {
               background-color: #9c9ca2;
               color: white;
-              padding: 10px 20px;
+              padding: 6px 20px;
               border-radius: 0px 10px 10px 10px;
               max-width: max-content;
               @include mobile{
@@ -483,9 +502,10 @@ $color4:#394655;
           align-items: center;
           gap: 10px;
 
-          img {
-            height: 24px;
+          label {
+            font-size: 24px;
             cursor: pointer;
+            color: #3e3c61;
             @include mobile{
               height: 20px;
             }

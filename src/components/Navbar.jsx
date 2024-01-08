@@ -18,6 +18,9 @@ const Navbar = () => {
     setshow(false);
   }
 
+  // console.log(typeof(parseInt(currentUser.metadata.createdAt)))
+  // const data=parseInt(currentUser.metadata.createdAt)
+
 
   return (
     <div className='navbar'>
@@ -45,6 +48,10 @@ const Navbar = () => {
               <div className='email'>{currentUser.email}</div>
               <label htmlFor="upmail"><BsFillPenFill />
               </label>
+              <input style={{ display: "none" }} type="button" name="upmail" id="upmail" />
+            </div>
+            <div className='details'>
+              <div className='email'>Join from: {currentUser.registrationDate}</div>
               <input style={{ display: "none" }} type="button" name="upmail" id="upmail" />
             </div>
           </div>

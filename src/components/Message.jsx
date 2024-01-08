@@ -1,15 +1,20 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
+import FindDate from "../convertDate";
 
 const Message = ({ message }) => {
   const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
-
+  // console.log(message.date.seconds)
+  const date=new Date(message.date.seconds*1000)
+  const dateString=FindDate(date)
   const ref = useRef();
+
 
   useEffect(() => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
+    
   }, [message]);
 
   return (
@@ -26,7 +31,7 @@ const Message = ({ message }) => {
           }
           alt=""
         />
-        <span>now</span>
+        <span>{dateString}</span>
       </div>
       <div className="messageContent">
         <p>{message.text}</p>

@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
-import Img from "../img/img.png";
 import Attach from "../img/attach.png";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
 import { IoSendSharp } from "react-icons/io5";
+import { BiSolidImageAdd } from "react-icons/bi";
+import { HiDocumentPlus } from "react-icons/hi2";
 import {
   arrayUnion,
   doc,
@@ -81,9 +82,10 @@ const Input = () => {
         placeholder="Type something..."
         onChange={(e) => setText(e.target.value)}
         value={text}
+        
       />
       <div className="send">
-        <img src={Attach} alt="" />
+        <label htmlFor="file"><HiDocumentPlus/></label>
         <input
           type="file"
           style={{ display: "none" }}
@@ -91,7 +93,8 @@ const Input = () => {
           onChange={(e) => setImg(e.target.files[0])}
         />
         <label htmlFor="file">
-          <img src={Img} alt="" />
+          {/* <img src={Img} alt="" /> */}
+          <BiSolidImageAdd/>
         </label>
         <button onClick={handleSend}><span><IoSendSharp/></span></button>
       </div>

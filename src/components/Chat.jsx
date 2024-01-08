@@ -12,7 +12,10 @@ const Chat = () => {
   return (
     <div className="chat">
       <div className="chatInfo">
-        <span>{data.user?.displayName}</span>
+        <div className="chatUser">
+          <span>{data.user?.displayName}</span>
+          <img src={data.user?.photoURL} alt="" />
+        </div>
         <div className="chatIcons">
           <img src={Cam} alt="" />
           <img src={Add} alt="" />
@@ -20,7 +23,7 @@ const Chat = () => {
         </div>
       </div>
       <Messages />
-      <Input/>
+      <Input />
     </div>
   );
 };
